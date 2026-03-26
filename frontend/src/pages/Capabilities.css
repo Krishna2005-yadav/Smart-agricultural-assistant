@@ -1,0 +1,49 @@
+/* Discover Page Styles (EXACT COPY FROM JOURNEYSCAPE) */
+
+.discover__hero {
+    padding-top: 10rem;
+    padding-bottom: var(--space-2xl);
+    text-align: center;
+}
+
+.discover__title {
+    font-size: var(--text-5xl);
+    text-align: center;
+    margin: 0.5rem 0 var(--space-md);
+}
+
+.discover__subtitle {
+    text-align: center;
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.discover__content {
+    padding-bottom: var(--space-4xl);
+}
+
+.discover__empty {
+    text-align: center;
+    padding: var(--space-4xl) 0;
+    color: var(--color-text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .discover__hero {
+        padding-top: 7rem;
+        padding-bottom: var(--space-lg);
+    }
+
+    .discover__subtitle {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .discover__hero {
+        padding-top: 6rem;
+    }
+}

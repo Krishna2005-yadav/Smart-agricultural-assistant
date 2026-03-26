@@ -1,0 +1,510 @@
+/* ═══════════════════════════════════════
+   Landing Page — JourneyScape Pattern
+   ═══════════════════════════════════════ */
+
+/* ─── Navbar ─── */
+.landing-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem clamp(1.5rem, 3vw, 4rem);
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.landing-nav__logo {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.landing-nav__logo em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.landing-nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.landing-nav__link {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.landing-nav__link:hover {
+    color: #fff;
+}
+
+.landing-nav .btn-primary {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+}
+
+.landing-nav .btn-primary:hover {
+    background: #fff;
+    color: var(--color-bg-dark);
+    border-color: #fff;
+}
+
+/* ─── Hero Section ─── */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__image-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero__image {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(26, 24, 20, 0.25) 0%,
+            rgba(26, 24, 20, 0.1) 40%,
+            rgba(26, 24, 20, 0.4) 80%,
+            rgba(26, 24, 20, 0.7) 100%);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 clamp(1.5rem, 2vw, 4rem);
+    max-width: 900px;
+    will-change: transform, opacity;
+}
+
+.hero__eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-lg);
+}
+
+.hero__title {
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-lg);
+    text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+    white-space: pre-line;
+}
+
+.hero__subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    font-weight: 300;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Scroll Indicator */
+.hero__scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 2;
+}
+
+.hero__scroll-text {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__scroll-line {
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__scroll-dot {
+    width: 1px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    animation: scrollDot 2s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+    0% {
+        top: -16px;
+    }
+
+    100% {
+        top: 48px;
+    }
+}
+
+/* ─── Introduction ─── */
+.landing__intro {
+    padding: var(--space-4xl) 0;
+}
+
+.landing__intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.landing__intro-text {
+    max-width: 520px;
+}
+
+.landing__intro-text .eyebrow {
+    margin-bottom: var(--space-md);
+}
+
+.landing__intro-text h2 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-lg);
+    line-height: 1.15;
+}
+
+.landing__intro-text p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.landing__intro-image {
+    position: relative;
+}
+
+.landing__intro-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+/* ─── Statistics ─── */
+.landing__stats {
+    padding: var(--space-4xl) 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.landing__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+    text-align: center;
+}
+
+.stat-counter {
+    padding: var(--space-xl) 0;
+}
+
+.stat-counter__value {
+    font-family: var(--font-serif);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-counter__prefix,
+.stat-counter__suffix {
+    font-size: 0.6em;
+    opacity: 0.7;
+}
+
+.stat-counter__label {
+    font-size: var(--text-sm);
+    opacity: 0.6;
+    color: inherit;
+}
+
+/* ─── Features ─── */
+.landing__features {
+    padding: var(--space-4xl) 0;
+}
+
+.landing__section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.landing__section-header .eyebrow {
+    margin-bottom: var(--space-md);
+}
+
+.landing__section-header h2 {
+    font-size: var(--text-4xl);
+}
+
+.landing__features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.landing__feature-card {
+    padding: var(--space-xl) !important;
+    transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+}
+
+.landing__feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.landing__feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: rgba(74, 103, 65, 0.06);
+    color: var(--color-forest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+}
+
+.landing__feature-card h3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.landing__feature-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+/* --- Agricultural Zones (Seven Worlds Style) --- */
+.landing__zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.landing__zone-card {
+    display: block;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.landing__zone-image-wrap {
+    position: absolute;
+    inset: 0;
+}
+
+.landing__zone-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+}
+
+.landing__zone-card:hover .landing__zone-image {
+    transform: scale(1.06);
+}
+
+.landing__zone-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.1) 60%);
+    transition: background 0.3s;
+}
+
+.landing__zone-card:hover .landing__zone-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.15) 60%);
+}
+
+.landing__zone-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-lg);
+    z-index: 2;
+}
+
+.landing__zone-info h3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.landing__zone-info p {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Featured Practices Grid --- */
+.landing__featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ─── Closing CTA ─── */
+.landing__closing {
+    position: relative;
+    padding: var(--space-4xl) 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.landing__closing-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.landing__closing-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing__closing-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 24, 20, 0.65);
+}
+
+.landing__closing-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.landing__closing-content h2 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+}
+
+.landing__closing-btn {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-bg-dark);
+    background: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.landing__closing-btn:hover {
+    background: var(--color-forest);
+    color: #fff;
+}
+
+/* ─── Footer ─── */
+.landing__footer {
+    background: var(--color-bg-dark);
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.landing__footer-brand {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: var(--color-text-on-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.landing__footer-brand em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.landing__footer p {
+    font-size: var(--text-sm);
+    color: rgba(245, 240, 235, 0.5);
+}
+
+.landing__footer-copy {
+    margin-top: var(--space-md);
+    font-size: var(--text-xs) !important;
+    opacity: 0.4;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: var(--text-4xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .landing__intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .landing__intro-image img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .landing__stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .landing__features-grid {
+        grid-template-columns: 1fr;
+    }
+}

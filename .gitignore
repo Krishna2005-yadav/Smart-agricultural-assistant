@@ -1,0 +1,64 @@
+# AgriNova: Final Project Gitignore
+# ===============================
+
+# 🚨 CRITICAL: Exclude Large ML Models (>100MB)
+*.keras
+trained_plant_disease_model.keras
+New Plant Diseases Dataset(Augmented)/
+
+# Database
+# database.db  # Friends should initialize their own, but template is okay
+
+# Python Environment
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Node.js
+node_modules/
+frontend/node_modules/
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Project Spares / Backups
+CSS-MP - Copy/
+smart_farming_prd.md
+AgriNova_Report.html
+Train_plant_disease_v2.ipynb
+
+# Dev & Test Scripts (Cleanup root)
+test_*.py
+check_*.py
+debug_*.py
+get_counts.py
+inspect_combinations.py
+newcode.jsx
+tmp_fix.py
+setup_project.bat
+orig_output.txt
+out.txt
+diag_output.txt
+test_nb.txt
+train_nb.txt
+*.jpg
+
+# Allowed Models (Small enough for standard Git)
+!model.pkl
+!minmaxscaler.pkl
+!standscaler.pkl
+!*.h5
+
+# Frontend Build Artifacts
+frontend/dist/
+frontend/build/
+.next/
+out/

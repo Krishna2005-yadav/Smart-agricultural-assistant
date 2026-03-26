@@ -1,0 +1,297 @@
+/* ── Deep Dive Guide ── */
+.pi-deep-dive {
+    max-width: 1000px;
+}
+
+.pi-deep-card {
+    background: var(--color-bg-card, #faf7f4);
+    border: 1px solid var(--color-surface, #e8e0d6);
+    border-radius: var(--radius-xl, 1rem);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.pi-deep-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--color-forest, #4a6741);
+}
+
+.pi-deep-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pi-deep-header h3 {
+    font-size: 1.5rem;
+    color: var(--color-text, #2c2824);
+    font-family: var(--font-serif, serif);
+}
+
+.pi-step {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.pi-step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-surface, #e8e0d6);
+    color: var(--color-text, #2c2824);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.pi-step-content {
+    flex-grow: 1;
+}
+
+.pi-step-title {
+    font-weight: 600;
+    color: var(--color-text, #2c2824);
+    margin-bottom: 0.5rem;
+}
+
+.pi-step-desc {
+    color: var(--color-text-light, #6b6159);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.pi-formula {
+    background: rgba(0,0,0,0.03);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: var(--color-forest-deep, #2d4a27);
+    display: inline-block;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ── Custom CSS Diagrams ── */
+
+.tech-diagram {
+    margin-top: 1.5rem;
+    background: var(--color-bg, #f5f0eb);
+    border: 1px solid var(--color-surface, #e8e0d6);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.diagram-icon {
+    color: var(--color-text-light, #6b6159);
+}
+
+.diagram-arrow {
+    color: var(--color-forest, #4a6741);
+}
+
+/* Diagram 1: Matrix */
+.matrix-diagram {
+    justify-content: space-around;
+}
+
+.diagram-box {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    border: 2px dashed var(--color-forest, #4a6741);
+    background: rgba(122, 154, 109, 0.05);
+    color: var(--color-text, #2c2824);
+    display: flex;
+    flex-direction: column;
+}
+
+.diagram-box.raw-img {
+    border-style: solid;
+    border-color: var(--color-text-light, #6b6159);
+}
+
+.diagram-box.tensor-cube {
+    background: var(--color-forest, #4a6741);
+    color: white;
+    border-style: solid;
+}
+
+.diagram-box.tensor-cube small {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Diagram 2: NN Layers */
+.nn-diagram {
+    justify-content: space-between;
+}
+
+.nn-layer {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-forest, #4a6741);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.nn-layer.hidden {
+    background: rgba(122, 154, 109, 0.2);
+    color: var(--color-text, #2c2824);
+    border: 2px solid var(--color-forest, #4a6741);
+}
+
+/* Diagram 3: Softmax */
+.softmax-diagram {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.softmax-bar {
+    height: 32px;
+    background: var(--color-surface, #e8e0d6);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.softmax-fill {
+    height: 100%;
+    background: var(--color-forest, #4a6741);
+    transition: width 1s ease-in-out;
+}
+
+.softmax-text {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    mix-blend-mode: difference;
+}
+
+/* Diagram 4: Formula Flow */
+.formula-flow {
+    flex-wrap: wrap;
+}
+
+.formula-flow .box {
+    min-width: 120px;
+}
+
+.formula-flow .operator {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-light, #6b6159);
+}
+
+.formula-flow .final-npk {
+    background: var(--color-forest, #4a6741);
+    color: white;
+    border-style: solid;
+}
+
+/* Diagram 5: Radar */
+.radar-diagram {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.radar-axis {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 1px dashed var(--color-surface, #e8e0d6);
+    font-size: 0.85rem;
+    color: var(--color-text-light, #6b6159);
+}
+
+.radar-center {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(122, 154, 109, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--color-forest, #4a6741);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ── Dark Theme ── */
+.dark-theme .pi-deep-card {
+    background: var(--color-bg-warm, #161b22);
+    border-color: rgba(255,255,255,0.06);
+}
+
+.dark-theme .pi-deep-header h3 {
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-step-num {
+    background: var(--color-surface, #30363d);
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-step-title {
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-step-desc {
+    color: var(--color-text-light, #c9d1d9);
+}
+
+.dark-theme .pi-formula {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.08);
+    color: var(--color-moss, #7a9a6d);
+}
+
+.dark-theme .tech-diagram {
+    background: var(--color-bg, #0d1117);
+    border-color: rgba(255,255,255,0.06);
+}
+
+.dark-theme .nn-layer.hidden {
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .diagram-box.raw-img {
+    color: var(--color-text, #f0f6fc);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.dark-theme .radar-axis {
+    border-bottom-color: rgba(255,255,255,0.06);
+}
+
+.dark-theme .formula-flow .operator {
+    color: var(--color-text-muted, #8b949e);
+}

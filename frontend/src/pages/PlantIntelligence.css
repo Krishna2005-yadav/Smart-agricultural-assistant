@@ -1,0 +1,114 @@
+/* Plant Intelligence / Discover Page Styles */
+
+.pi-page-root {
+    min-height: 100vh;
+    background: var(--color-bg, #f5f0eb);
+    color: var(--color-text, #2c2824);
+}
+
+.pi-hero {
+    padding-top: 10rem;
+    padding-bottom: var(--space-2xl, 3rem);
+    text-align: center;
+}
+
+.pi-title {
+    font-size: var(--text-5xl, 3rem);
+    text-align: center;
+    margin: 0.5rem 0 var(--space-md, 1rem);
+    font-family: var(--font-serif, serif);
+    font-weight: 500;
+}
+
+.pi-subtitle {
+    text-align: center;
+    font-size: var(--text-lg, 1.125rem);
+    color: var(--color-text-muted, #6b6159);
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: var(--font-sans, sans-serif);
+}
+
+.pi-content {
+    padding-bottom: var(--space-4xl, 5rem);
+}
+
+.pi-empty {
+    text-align: center;
+    padding: var(--space-4xl, 5rem) 0;
+    color: var(--color-text-muted);
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .pi-hero {
+        padding-top: 7rem;
+        padding-bottom: var(--space-lg, 2rem);
+    }
+
+    .pi-subtitle {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pi-hero {
+        padding-top: 6rem;
+    }
+}
+
+/* ── Dark Theme ── */
+.dark-theme .pi-page-root {
+    background: var(--color-bg, #0d1117);
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-subtitle {
+    color: var(--color-text-muted, #8b949e);
+}
+
+.dark-theme .pi-deep-title {
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-deep-card {
+    background: var(--color-bg-warm, #161b22);
+    border-color: rgba(255,255,255,0.06);
+}
+
+.dark-theme .pi-deep-header h3 {
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-step-num {
+    background: var(--color-surface, #30363d);
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-step-title {
+    color: var(--color-text, #f0f6fc);
+}
+
+.dark-theme .pi-step-desc {
+    color: var(--color-text-light, #c9d1d9);
+}
+
+.dark-theme .pi-formula {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.08);
+    color: var(--color-moss, #7a9a6d);
+}
+
+.dark-theme .pi-usage {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.dark-theme .pi-usage-text {
+    color: var(--color-text-light, #c9d1d9);
+}
+
+.dark-theme .pi-usage-text strong {
+    color: var(--color-text, #f0f6fc);
+}
