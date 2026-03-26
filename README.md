@@ -55,10 +55,10 @@ Follow these steps to set up the project on your local machine.
 - **Premium Dashboard**: Glassmorphic UI with full Dark Mode support.
 
 ## 👥 Contributors
-- **Om Kamble** (UX/UI & Dashboard)
+- **Om Kamble** (Integration & Documentation)
 - **Akash Radhakrishnan** (Backend & Crop Logic)
 - **Krishna Yadav** (ML & Computer Vision)
-- **Snaket Bihare** (Integration & Documentation)
+- **Snaket Bihare** (UX/UI & Dashboard)
 
 ---
 *Developed for MSBTE 6th Semester Micro-Project Submission.*
