@@ -7,7 +7,7 @@ trained_plant_disease_model.keras
 New Plant Diseases Dataset(Augmented)/
 
 # Database
-# database.db  # Friends should initialize their own, but template is okay
+database.db
 
 # Python Environment
 venv/
@@ -36,6 +36,7 @@ AgriNova_Report.html
 Train_plant_disease_v2.ipynb
 
 # Dev & Test Scripts (Cleanup root)
+main.py
 test_*.py
 check_*.py
 debug_*.py
