@@ -1,7 +1,5 @@
-# AgriNova: Final Project Gitignore
-# ===============================
 
-# 🚨 CRITICAL: Exclude Large ML Models (>100MB)
+Exclude Large ML Models (>100MB)
 *.keras
 trained_plant_disease_model.keras
 New Plant Diseases Dataset(Augmented)/
